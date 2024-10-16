@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="..">
+      <UniqueIdentifier>{61705900-4DFC-870B-B6AA-880BA255880B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\Example">
+      <UniqueIdentifier>{1CBB7C1C-0873-BE69-717A-97C55D51595A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\Workspace">
+      <UniqueIdentifier>{FF963329-EBF9-C2CD-947F-FB8380C18E50}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Example\premake5.lua">
+      <Filter>..\Example</Filter>
+    </None>
+    <None Include="..\..\Premake5.lua">
+      <Filter>..</Filter>
+    </None>
+    <None Include="..\..\Workspace\Premake5.lua">
+      <Filter>..\Workspace</Filter>
+    </None>
+    <None Include="premake5.lua" />
+  </ItemGroup>
+</Project>

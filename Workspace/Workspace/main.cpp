@@ -3,29 +3,57 @@
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(1024, 768), "SFML works!");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
+	sf::VideoMode vm(1920, 1080);
+	sf::RenderWindow window(vm, "Timber!!!", sf::Style::Default);
 
-    shape.setPosition(0.0f, 568.0f);
-    while (window.isOpen())
-    {
-        sf::Event event;
-        while (window.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-                window.close();
-            if (event.type == sf::Event::MouseButtonPressed)
-            {
-                const auto& pos = sf::Mouse::getPosition();
-                std::cout << pos.x << ", " << pos.y << "\n";
-            }
-        }
+	sf::Texture texBackgound;
+	texBackgound.loadFromFile("graphics/background.png");
+	
+	sf::Sprite spriteBackground;
+	spriteBackground.setTexture(texBackgound);
+	spriteBackground.setPosition(0.f, 0.f);
 
-        window.clear();
-        window.draw(shape);
-        window.display();
-    }
 
-    return 0;
+	sf::Texture texCloud;
+	texCloud.loadFromFile("graphics/cloud.png");
+
+	sf::Sprite spriteCloud;
+	spriteCloud.setTexture(texCloud);
+	spriteCloud.setPosition(0.f, 0.f);
+
+
+	sf::Texture texBee;
+	texBee.loadFromFile("graphics/bee.png");
+
+
+
+
+	//sf::Vector2f position();
+	//spriteBackground.setOrigin(1920/2,1080/2);
+
+	while (window.isOpen())
+	{
+		sf::Event ev;
+		while (window.pollEvent(ev))
+		{
+			switch (ev.type)
+			{
+			case sf::Event::EventType::Closed:
+				window.close();
+				break;
+			default:
+				break;
+			}
+		}
+
+		// 업데이트 
+
+		window.clear();
+
+		window.draw(spriteBackground);
+
+		window.display();
+	}
+
+	return 0;
 }
