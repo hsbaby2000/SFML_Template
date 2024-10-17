@@ -7,8 +7,6 @@ staticruntime "off"
 systemversion "latest"
 
 -- pchheader "pch.h"
--- pchsource "%{prj.name}/src/pch.cpp"
-debugdir("../Build/Bin/"..outputDir.."/%{prj.name}")
 targetdir("../Build/Bin/"..outputDir.."/%{prj.name}")
 objdir("../Build/Bin-int/"..outputDir.."/%{prj.name}")
 
